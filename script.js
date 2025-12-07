@@ -12,7 +12,7 @@
         for (var i = 0; i < response.length; i++){
             output += '<li class="scoreBox">';
             output += '<ul id = "scoreBox' + i + '">'; 
-            output += '<li id="icon'+ i +'">'+'<img src ='+response[i].icon+'>'+'</li>';
+            output += '<li id="icon'+ i +'">'+'<img src ='+response[i].icon+' alt="iconImage">'+'</li>';
             output += '<li id="category'+ i +'">'+ response[i].category + '</li>';
             output += '<li id="score'+ i +'">'+ response[i].score + '<span class="outOf100"> / 100 </span>' + '</li>';
             output += '</ul>';
