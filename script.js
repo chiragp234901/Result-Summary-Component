@@ -1,5 +1,5 @@
 
-  var xhttp = new XMLHttpRequest();
+  const xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function() {
         if (this.readyState === 4 && this.status === 200) {
         // Typical action to be performed when the document is ready:
@@ -42,7 +42,13 @@
             var displayAverage;
             if (Array.isArray(response) && response.length > 0) {
                 displayAverage = Math.trunc(averageTotal / response.length);
-                document.getElementById('average').innerHTML = displayAverage;
+                const averageElement = document.getElementById('average'); // Get element once
+
+                if (averageElement) { // Check if element exists before updating
+                    averageElement.innerHTML = displayAverage;
+                } else {
+                    console.warn('Element with ID "average" not found.'); // Optional: helpful debug message
+                }
             } else {
                 // Handle invalid or empty response gracefully
                 document.getElementById('average').innerHTML = 'No data available';
