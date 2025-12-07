@@ -34,16 +34,15 @@ body{
     display: grid;
     justify-items: center; 
     align-items: center;
-    height: 100vh; /* Example: Centers within the full viewport height */
-    
+    height: 100vh; /* Example: Centers within the full viewport height */  
 }
 
 main{
     display: flex;
     flex-direction: row;
     background-color: var(--White);
-    border-top-right-radius: 2em;
-    border-bottom-right-radius: 2em;
+    border-radius: 2em;
+    overflow: hidden;
 }
 
 .mainBox{
@@ -305,6 +304,7 @@ main{
         display: flex;
         flex-direction: column;
         background-color: var(--White);
+        border-radius: 0;
     }
 
     .mainBox{
