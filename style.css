@@ -1,3 +1,5 @@
+@import '@fontsource/hanken-grotesk';
+
 :root{
     --Light-red: hsl(0, 100%, 67%);
     --Orangey-yellow: hsl(39, 100%, 56%);
@@ -20,7 +22,6 @@
     --font-family-secondary: 'HankenGrotesk-VariableFont_wght.ttf', 'Verdana';*/
 }
 
-@import '@fontsource/hanken-grotesk';
 @font-face {
   font-family: 'MyCustomFont';
   src: url('HankenGrotesk-VariableFont_wght.ttf');
@@ -114,7 +115,7 @@ main{
     text-align: center;
     position: absolute;
     top: 50%;
-    transform: translateY(0%);
+    transform: translateY(15%);
 }
 
 .summaryBox{

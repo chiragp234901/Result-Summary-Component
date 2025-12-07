@@ -30,10 +30,23 @@
                 console.error('Expected response to be an array but got:', response);
                 // Optionally, show a user-friendly message or fallback UI here
             }
-            document.getElementById('score').innerHTML = output;
+            const scoreElement = document.getElementById('score'); // Get the element once
 
-            let displayAverage = Math.trunc(averageTotal / response.length);
-            document.getElementById('average').innerHTML = displayAverage;
+            if (scoreElement) { // Check if it exists before updating
+                scoreElement.innerHTML = output; // Safe to update now
+            } else {
+                console.warn('Element with ID "score" not found.'); // Optional: helpful debug info
+            }
+
+            // Check if response is an array and has elements to avoid errors and division by zero
+            var displayAverage;
+            if (Array.isArray(response) && response.length > 0) {
+                displayAverage = Math.trunc(averageTotal / response.length);
+                document.getElementById('average').innerHTML = displayAverage;
+            } else {
+                // Handle invalid or empty response gracefully
+                document.getElementById('average').innerHTML = 'No data available';
+            }
 
             let display65Message = '';
             let display50Message = '';
