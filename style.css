@@ -1,0 +1,392 @@
+:root{
+    --Light-red: hsl(0, 100%, 67%);
+    --Orangey-yellow: hsl(39, 100%, 56%);
+    --Green-teal: hsl(166, 100%, 37%);
+    --Cobalt-blue: hsl(234, 85%, 45%);
+
+    --Light-slate-blue: hsl(252, 100%, 67%);
+    --Light-royal-blue: hsl(241, 81%, 54%);
+
+    --Violet-blue: hsla(256, 72%, 46%, 1);
+    --Persian-blue: hsla(241, 72%, 46%, 0);
+
+    --White: hsl(0, 0%, 100%);
+    --Pale-blue: hsl(221, 100%, 96%);
+    --Light-lavender: hsl(241, 100%, 89%);
+    --Dark-lavender: hsla(241, 100%, 89%, 0.473);
+    --Dark-gray-blue: hsl(224, 30%, 27%);
+
+    /*--font-family-primary:'Hanken Grotesk';  /* font variable 
+    --font-family-secondary: 'HankenGrotesk-VariableFont_wght.ttf', 'Verdana';*/
+}
+
+@import '@fontsource/hanken-grotesk';
+@font-face {
+  font-family: 'MyCustomFont';
+  src: url('HankenGrotesk-VariableFont_wght.ttf');
+}
+
+body{
+    background-color: var(--Pale-blue);
+}
+
+.backgroundBox{
+    display: grid;
+    justify-items: center; 
+    align-items: center;
+    height: 100vh; /* Example: Centers within the full viewport height */
+    
+}
+
+main{
+    display: flex;
+    flex-direction: row;
+    background-color: var(--White);
+    border-top-right-radius: 2em;
+    border-bottom-right-radius: 2em;
+}
+
+.mainBox{
+    background-image: linear-gradient(to bottom, var(--Light-slate-blue), var(--Light-royal-blue));
+    text-align: center;
+    font-family:'MyCustomFont';
+    border-radius: 2em;
+    width: 21em;
+    height: 29em;
+}
+
+.heading{
+    font-family: 'MyCustomFont';
+    color: var(--Light-lavender);
+    font-size: 1.3em;
+    font-weight: 700;
+    padding-top: 1.1em;
+}
+
+.circle{
+    background-image: linear-gradient(to bottom, var(--Violet-blue), var(--Persian-blue));
+    border-radius: 50%; /* This makes the square element a circle */
+    width: 180px; /* Or any specific width/max-width */
+    height: 180px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#average{
+    font-family: 'MyCustomFont';
+    color: var(--White);
+    font-size: 4.2em;
+    font-weight: 700; 
+    margin:0;
+    margin-top: 0.50em;
+    padding-top: 0.65em;
+}
+
+#outOf{
+    font-family: 'MyCustomFont';
+    margin:0;
+    color:var(--Dark-lavender); 
+    font-weight: 700;
+}
+
+.congratsMessage{
+    display: flex;
+    align-items: center; /* Aligns text vertically */
+    justify-content: center;
+    position: relative;  
+}
+
+#congrats{
+    font-family: 'MyCustomFont';
+    font-size: 1.7em;
+    color:var(--White);
+    font-weight: 700;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+#message{
+    font-family: 'MyCustomFont';
+    color:var(--Light-lavender);
+    font-weight: 500;
+    margin-left: auto;
+    margin-right: auto;
+    width:65%;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    transform: translateY(0%);
+}
+
+.summaryBox{
+    background-color: var(--White);
+    border-top-right-radius: 2em;
+    border-bottom-right-radius: 2em;
+    width: 21em;
+    height: 29em;
+}
+
+.summary{
+    font-family: 'MyCustomFont';
+    padding-left: 1.8em;
+    padding-top: 0.5em;
+    font-size: 1.3em;
+    font-weight: 700;
+    color: var(--Dark-gray-blue);
+}
+
+#score{
+    list-style-type: none;
+}
+
+.scoreBox{
+    list-style-type: none;
+    width: 86%;
+    padding:0.5em;
+    padding-left: 0;
+}
+
+#scoreBox0{
+    font-family: 'MyCustomFont';
+    background-color: hsla(0, 93%, 89%, 0.2);
+    list-style-type: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 30px 150px 75px;
+    align-items: center;
+    height: 3em;
+    border-radius: 12px;
+}
+
+#scoreBox1{
+    font-family: 'MyCustomFont';
+    background-color: hsla(39, 95%, 85%, 0.2);
+    list-style-type: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 30px 150px 75px;
+    align-items: center;
+    height: 3em;
+    border-radius: 12px;
+}
+
+#scoreBox2{
+    font-family: 'MyCustomFont';
+    background-color: hsla(166, 64%, 79%, 0.2);
+    list-style-type: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 30px 150px 75px;
+    align-items: center;
+    height: 3em;
+    border-radius: 12px;
+}
+
+#scoreBox3{
+    font-family: 'MyCustomFont';
+    background-color: hsla(236, 52%, 80%, 0.2);
+    list-style-type: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 30px 150px 75px;
+    align-items: center;
+    height: 3em;
+    border-radius: 12px;
+}
+
+#icon0{
+    padding-left: 10px;
+    height: 20px;
+    width: auto;
+}
+
+#icon1{
+    padding-left: 10px;
+    height: 20px;
+    width: auto;
+}
+
+#icon2{
+    padding-left: 10px;
+    height: 20px;
+    width: auto;
+}
+
+#icon3{
+    padding-left: 10px;
+    height: 20px;
+    width: auto;
+}
+
+#category0{
+    padding-left: 10px;
+    color: var(--Light-red);
+    font-weight: 700;
+}
+
+#category1{
+    padding-left: 10px;
+    color: var(--Orangey-yellow);
+    font-weight: 700;
+}
+
+#category2{
+    padding-left: 10px;
+    color: var(--Green-teal);
+    font-weight: 700;
+}
+
+#category3{
+    padding-left: 10px;
+    color: var(--Cobalt-blue);
+    font-weight: 700;
+}
+
+.outOf100{
+    color: hsl(214, 4%, 63%);
+    font-weight: 700;
+    padding-right: 5px;
+}
+
+#score0{
+    color: var(--Dark-gray-blue);
+    font-weight: 800;
+}
+
+#score1{
+    color: var(--Dark-gray-blue);
+    font-weight: 800;
+}
+
+#score2{
+    color: var(--Dark-gray-blue);
+    font-weight: 800;
+}
+
+#score3{
+    color: var(--Dark-gray-blue);
+    font-weight: 800;
+}
+
+.button{
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    margin-top: 2em;   
+}
+
+.continueButton{
+    width: 75%;
+    height: 3.5em;
+    background-color: var(--Dark-gray-blue);
+    color: var(--White);
+    font-size: 1em;
+    font-weight: 600;
+    border-radius: 50px;
+}
+
+.continueButton:hover{
+    background-color: var(--Light-royal-blue);
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+@media screen and (max-width: 23.4375em)  { /* 375px / 16 = 23.4375em */
+    body{
+        background-color: black;
+    }
+
+    main{
+        display: flex;
+        flex-direction: column;
+        background-color: var(--White);
+    }
+
+    .mainBox{
+        background-image: linear-gradient(to bottom, var(--Light-slate-blue), var(--Light-royal-blue));
+        text-align: center;
+        font-family:'MyCustomFont';
+        border-radius: 0;
+        border-bottom-left-radius: 2em;
+        border-bottom-right-radius: 2em;
+        width: 21em;
+        height: 23em;
+    }
+
+    .heading{
+        font-family: 'MyCustomFont';
+        color: var(--Light-lavender);
+        font-size: 1.15em;
+        font-weight: 700;
+        padding-top: 0.5em;
+    }
+
+    .circle{
+        background-image: linear-gradient(to bottom, var(--Violet-blue), var(--Persian-blue));
+        border-radius: 50%; /* This makes the square element a circle */
+        width: 140px; /* Or any specific width/max-width */
+        height: 140px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #average{
+        font-family: 'MyCustomFont';
+        color: var(--White);
+        font-size: 3.2em;
+        font-weight: 700; 
+        margin:0;
+        margin-top: 0.50em;
+        padding-top: 0.50em;
+    }
+
+    #outOf{
+        font-family: 'MyCustomFont';
+        margin:0;
+        margin-bottom: 2em;
+        color:var(--Dark-lavender); 
+        font-weight: 700;
+    }
+
+    .congratsMessage{
+        display: flex;
+        align-items: center; /* Aligns text vertically */
+        justify-content: center;
+        position: relative;  
+    }
+
+    #congrats{
+        font-family: 'MyCustomFont';
+        font-size: 1.7em;
+        color:var(--White);
+        font-weight: 700;
+        margin-bottom: 0;
+        margin-top: 0;
+    }
+
+    #message{
+        font-family: 'MyCustomFont';
+        color:var(--Light-lavender);
+        font-weight: 500;
+        margin-left: auto;
+        margin-right: auto;
+        width:85%;
+        text-align: center;
+        position: absolute;
+        top: 50%;
+        transform: translateY(0%);
+    }
+
+    .summaryBox{
+        background-color: var(--White);
+        border-radius: 0;
+        width: 21em;
+        height: 29em;
+    }
+
+}
